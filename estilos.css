@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    line-height: 1.6;
+}
+h1 { font-size: 3.5em; }
+h2 { font-size: 2.5em; }
+h3 { font-size: 2em; }
+p  { font-size: 1.2em; }
+
+.contenido {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    background-color: #172e47;
+    color: white;
+    padding: 20px 0;
+}
+
+header .contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    color: rgb(0, 218, 247);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #2c5551;
+}
+
+#menu {
+    min-height: 450px;
+    background: linear-gradient(
+        rgba(10, 30, 60, 0.8),
+        rgba(80, 104, 139, 0.8)
+    ), url("imagenes/student.jpg") center/cover no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+    padding: 40px 20px;
+}
+
+#menu h1 {
+    font-size: clamp(30px, 5vw, 52px);
+    color: rgb(255, 255, 255);
+}
+#seccion-ya h2 {
+    text-align: center;
+    align-items: center;
+
+}
+
+#seccion-ya .contenido {
+    text-align: center;
+    padding: 100px 12px;
+}
+
+.seccion-contacto {
+    background-color: #f0f5fa;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.seccion-contacto h2 {
+    color: #12345a;
+    margin-bottom: 25px;
+}
+
+.formulario-postulacion {
+    background-color: white;
+    max-width: 500px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario-postulacion input,
+.formulario-postulacion select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.formulario-postulacion input:focus,
+.formulario-postulacion select:focus {
+    border-color: #0879d9;
+    box-shadow: 0 0 5px rgba(8, 121, 217, 0.3);
+}
+
+.formulario-postulacion button {
+    background-color: #0879d9;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.formulario-postulacion button:hover {
+    background-color: #075ca5;
+    transform: translateY(-3px);
+}
+
+#mensaje {
+    color: #12345a;
+    font-weight: bold;
+}
+
+button {
+    background-color: #76b37e;
+    font-size: 4sem;
+    font-weight: bold;
+    color: rgb(2, 0, 0);
+    border: none;
+    border-radius: 10px;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+button:hover {
+    background-color: #4a9793;
+    transform: translateY(-3px);
+}
+
+.Cursos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    padding: 30px 0;
+}
+
+.cartas {
+    background-color: #f5f8fc;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cartas:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+}
+
+#nuestros-cursos {
+    padding: 60px 0;
+    text-align: center;
+}
+#nuestros-cursos .cartas {
+    background-position: center;
+    background-size: cover;
+    padding: 35px 25px;
+    margin: 0;
+    border-radius: 15px;
+    color: rgb(255, 254, 254);
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+#nuestros-cursos .cartas::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(34, 47, 54, 0.075),
+        rgba(90, 107, 133, 0.65)
+    );
+    z-index: -1;
+}
+
+.cartas h3 {
+    margin-bottom: 15px;
+}
+
+.cartas p {
+    margin-bottom: 10px;
+}
+
+.cartas:first-child {
+    background-image: url("imagenes/sistemas.jpg");
+}
+.cartas:nth-child(2) {
+    background-image: url("imagenes/medicina.jpg");
+}
+.cartas:nth-child(3) {
+    background-image: url("imagenes/civil.jpg");
+}
+.cartas:nth-child(4) {
+    background-image: url("imagenes/mecanica.jpg");
+}
+
+#caracteristicas {
+    background-color: #edf5ff;
+    padding: 50px 20px;
+}
+
+#caracteristicas ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin: 10px 0px;
+    font-weight: bold;
+    
+}
+
+.footer {
+    background-color: #102944;
+    color: white;
+    padding: 40px 5% 20px;
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-enlaces {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-enlaces a {
+    color: #d5e7fa;
+    text-decoration: none;
+}
+
+.footer-enlaces a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-final {
+    text-align: center;
+    border-top: 1px solid #52677d;
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+@media (max-width: 900px) {
+    header .contenido {
+        flex-direction: column;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .Cursos {
+        grid-template-columns: 1fr;
+    }
+
+    #caracteristicas ul {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-contenido {
+        flex-direction: column;
+    }
+}
